@@ -8,10 +8,10 @@ import { ServiceBase } from 'src/app/global/base-class/service-base';
 })
 export class MoviesserviceService extends ServiceBase {
   private readonly defaultURL = "https://localhost:44386/api/";
-  private readonly getAllStudentURL = 'https://localhost:44386/api/Student';
-  private readonly getByIdURL = 'https://localhost:44386/api/Student/';
-  private readonly InsertUpdateStudentURL =  'https://localhost:44386/api/Student';
-  private readonly DeleteStudentURL = "https://localhost:44386/api/Student?studentId="
+  private readonly getAllStudentURL = 'https://localhost:44386/api/Movies/';
+  private readonly getByIdURL = 'https://localhost:44386/api/Movies/';
+  private readonly InsertUpdateStudentURL =  'https://localhost:44386/api/Movies/';
+  private readonly DeleteStudentURL = "https://localhost:44386/api/Movies"
   constructor(private http: HttpClient) {
     super();
    }
@@ -24,11 +24,14 @@ export class MoviesserviceService extends ServiceBase {
       return this.http.get(this.getAllStudentURL);
   }
 
-  InsertUpdateMovie(object: any) {
+  InsertMovie(object: any) {
     return this.http.post(this.InsertUpdateStudentURL, object);
+  }
+  UpdateMovie(object: any) {
+    return this.http.put(this.InsertUpdateStudentURL, object);
   }
 
   deleteMovie(id : any){
-    return this.http.delete(this.DeleteStudentURL + id);
+    return this.http.delete(this.DeleteStudentURL + '?movieID='+id);
   }
 }

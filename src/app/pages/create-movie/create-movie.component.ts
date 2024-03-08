@@ -71,15 +71,27 @@ export class CreateMovieComponent extends DetailBase implements OnInit {
 
   onBtnSaveClick = () => {
     if (this.rForm.valid) {
-      this.service.InsertUpdateMovie(this.rForm.value).subscribe(
-        (res: any) => {
-          if (res.success) {
-            this.popupVisible = false;
-            this.isDataSaved = true;
-            CustomDialogHelper.notifySuccessMsg(res.message);
+      if( this.rForm.value.id > 0){
+        this.service.UpdateMovie(this.rForm.value).subscribe(
+          (res: any) => {
+            if (res.success) {
+              this.popupVisible = false;
+              this.isDataSaved = true;
+              CustomDialogHelper.notifySuccessMsg(res.message);
+            }
           }
-        }
-      );
+        );
+      }else{
+        this.service.InsertMovie(this.rForm.value).subscribe(
+          (res: any) => {
+            if (res.success) {
+              this.popupVisible = false;
+              this.isDataSaved = true;
+              CustomDialogHelper.notifySuccessMsg(res.message);
+            }
+          }
+        );
+      }
     } else {
       CustomDialogHelper.notifyErrorMsg('Please Fill all Required Fields');
     }
