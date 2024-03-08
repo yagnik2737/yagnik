@@ -1,0 +1,362 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./styles.css";
+@import "../src/app/dx-style.scss";
+.dx-swatch-additional
+  .dx-treeview-node-is-leaf
+  .dx-item.dx-treeview-item:hover {
+  background-color: #004766 !important;
+}
+li.dx-state-selected.dx-treeview-item-without-checkbox.dx-treeview-node.dx-treeview-node-is-leaf {
+  background-color: #004766 !important;
+}
+.menu-container .dx-treeview .dx-treeview-node[aria-level="1"] {
+  font-weight: 700 !important;
+  border-bottom: 1px solid #004766 !important;
+}
+.menu-container
+  .dx-treeview
+  .dx-treeview-node[aria-level="2"]
+  .dx-treeview-item-content {
+  font-weight: 500;
+  padding: 0 70px !important;
+}
+
+.menu-container
+  .dx-treeview
+  .dx-treeview-node[aria-level="3"]
+  .dx-treeview-item-content {
+  font-weight: 300;
+  padding: 0 70px !important;
+  .dx-icon {
+    width: 30px !important;
+    margin: 0 !important;
+  }
+}
+
+::ng-deep
+  .dx-swatch-additional
+  .dx-treeview-node-is-leaf
+  .dx-item.dx-treeview-item {
+  .dx-icon {
+    margin-left: 15px;
+  }
+}
+.menu-container
+  .dx-treeview
+  .dx-treeview-node-container
+  .dx-treeview-node.dx-state-selected
+  > .dx-treeview-item
+  * {
+  // color: #ec9513 !important;
+  color: #49bbff !important;
+}
+
+.pull-right {
+  float: right;
+}
+
+// .auth-logo .auth-logo-dark {
+//   display: block;
+// }
+
+// .auth-logo .auth-logo-light {
+//   display: none;
+// }
+
+// .auth-body-bg {
+//   background-color: #222 !important;
+// }
+// .bg-overlay {
+//   position: absolute;
+//   height: 100%;
+//   width: 100%;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   top: 0;
+//   opacity: 0.7;
+//   background-color: #222;
+// }
+// .auth-full-bg {
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+// }
+
+.f-25 {
+  font-size: 25px !important;
+}
+
+// .auth-full-bg::before {
+//   content: "";
+//   position: absolute;
+//   width: 300px;
+//   height: 300px;
+//   border-radius: 50%;
+// }
+
+// .auth-full-bg .bg-overlay {
+//   background: url("assets/images/slider1.jpg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+//   filter: brightness(100%);
+//   background-color: rgb(0, 0, 0) !important;
+// }
+
+.x-date-range-filter {
+  padding: 0 0 15px 0;
+}
+
+.d-map-card {
+  background: #fff;
+  z-index: 9999;
+  height: 100%;
+}
+
+.d-map-card .d-map-card-icon {
+  width: 50%;
+  display: inline-block;
+  padding: 5px;
+  text-align: left;
+}
+.d-map-card .d-map-card-icon .d-value {
+  font-size: 20px;
+  color: #fff;
+  line-height: 30px;
+}
+
+.d-map-card .d-map-card-icon .d-title {
+  font-style: normal;
+  text-transform: capitalize;
+  color: #fff;
+  opacity: 0.8;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.d-map-card .d-map-card-icon.d-map-card-clickable {
+  cursor: pointer;
+  display: block;
+  height: 100%;
+}
+
+.d-full-box {
+  width: 100% !important;
+}
+
+.d-map-card .d-map-card-icon.d-map-card-dodger-blue {
+  background-color: #0098cd;
+}
+
+.d-map-card .d-map-card-icon.d-map-card-dark-green {
+  background-color: #2ca01c;
+}
+
+.d-map-card .d-map-card-icon.d-map-card-dark-orange {
+  background-color: #ec9513;
+}
+.d-map-card .d-map-card-icon.d-map-card-medium-blue {
+  background-color: #0077c5;
+}
+
+.d-map-card .d-map-card-icon.d-map-card-lime-green {
+  background-color: #7fd000;
+}
+
+.d-map-card-dark-green {
+  background-image: linear-gradient(135deg, #e8198b 10%, #c7eafd 100%);
+}
+
+.d-map-card-lime-green {
+  background-image: linear-gradient(135deg, #a8bfff 10%, #884d80 100%);
+}
+.d-roles-tree-list
+  .dx-treelist-rowsview
+  .dx-selection.dx-row:not(.dx-row-focused)
+  > td {
+  background-color: transparent !important;
+}
+
+.dashboard-content {
+  font-family: "Robotto", sans-serif !important;
+}
+
+// .bg-info {
+//   background: linear-gradient(
+//     to bottom right,
+//     #4be8d4 0%,
+//     #129bd2 100%
+//   ) !important;
+// }
+
+// .bg-warning {
+//   background: linear-gradient(
+//     to bottom right,
+//     #9070ff 0%,
+//     #ff5d9e 100%
+//   ) !important;
+// }
+
+// .bg-success {
+//   background: linear-gradient(
+//     to bottom right,
+//     #1e63c3 0%,
+//     #00f2fe 100%
+//   ) !important;
+// }
+
+// .bg-danger {
+//   background: linear-gradient(
+//     to bottom right,
+//     #f66b4e 0%,
+//     #fbc434 100%
+//   ) !important;
+// }
+// .bg-icon-1 {
+//   background-image: linear-gradient(135deg, #536976 10%, #292e49 100%);
+// }
+
+// .bg-icon-2 {
+//   background-image: linear-gradient(135deg, #9796f0 10%, #fbc7d4 100%);
+// }
+// .bg-icon-3 {
+//   background-image: linear-gradient(135deg, #f97794 10%, #623aa2 100%);
+// }
+// .bg-icon-4 {
+//   background-image: linear-gradient(135deg, #09203f 10%, #537895 100%);
+// }
+// .bg-icon-5 {
+//   background-image: linear-gradient(135deg, #ff9d6c 10%, #bb4e75 100%);
+// }
+
+// .card-chart {
+//   overflow: hidden;
+// }
+// .card-chart .card-header {
+//   background-color: transparent !important;
+// }
+
+// .card-chart .card-header .card-title i {
+//   font-size: 16px;
+//   margin-right: 5px;
+//   margin-bottom: 3px;
+// }
+
+// .card-chart .card-header .card-category {
+//   margin-bottom: 5px;
+// }
+
+// .card-chart .card-body {
+//   padding-left: 5px;
+//   padding-right: 5px;
+// }
+
+// .card-chart .card-body .tab-space {
+//   padding: 0;
+// }
+
+// .card-chart .table {
+//   margin-bottom: 0;
+// }
+
+// .card-chart .table td {
+//   border-top: none;
+//   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+// }
+
+// .card-chart .card-progress {
+//   margin-top: 30px;
+//   padding: 0 10px;
+// }
+
+// .card-chart .chart-area {
+//   height: 220px;
+//   width: 100%;
+// }
+
+// .card-chart .card-footer {
+//   margin-top: 15px;
+// }
+
+// .card-chart .card-footer .stats {
+//   color: #9a9a9a;
+// }
+
+// .card-chart .dropdown {
+//   position: absolute;
+//   right: 20px;
+//   top: 20px;
+// }
+
+// .card-chart .dropdown .btn {
+//   margin: 0;
+// }
+
+// .card-chart.card-chart-pie .chart-area {
+//   padding: 10px 0 25px;
+//   height: auto;
+// }
+
+// .card-chart.card-chart-pie .card-title {
+//   margin-bottom: 10px;
+// }
+
+// .card-chart.card-chart-pie .card-title i {
+//   font-size: 1rem;
+// }
+
+// .icon-shape {
+//   display: inline-flex;
+//   padding: 12px;
+//   text-align: center;
+//   border-radius: 50%;
+//   align-items: center;
+//   justify-content: center;
+// }
+// .icon-shape i,
+// .icon-shape svg {
+//   font-size: 1.25rem;
+// }
+// .icon {
+//   width: 2.5rem;
+//   height: 2.5rem;
+// }
+// .text-white {
+//   color: #fff !important;
+// }
+
+// .d-image-gallery {
+//   border: 1px solid #ddd;
+//   border-radius: 4px;
+// }
+
+blockquote {
+  background-color: rgb(255, 255, 255);
+  border-left: 0.7rem solid rgb(0, 123, 255);
+  margin: 1.5em 0.7rem;
+  padding: 0.5em 0.7rem;
+}
+
+blockquote.quote-success {
+  border-color: rgb(40, 167, 69);
+}
+
+.dx-checkbox-text {
+  width: max-content;
+}
+
+blockquote {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.text-muted {
+  color: rgb(108, 117, 125) !important;
+}

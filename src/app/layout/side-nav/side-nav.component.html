@@ -1,0 +1,13 @@
+<div class="menu-container">
+  <dx-tree-view
+    [items]="menus"
+    keyExpr="path"
+    selectionMode="single"
+    [focusStateEnabled]="false"
+    (onItemClick)="onItemClick($event)"
+    expandEvent="click"
+    width="100%"
+    [searchEnabled]="true"
+    searchMode="contains"
+  ></dx-tree-view>
+</div>

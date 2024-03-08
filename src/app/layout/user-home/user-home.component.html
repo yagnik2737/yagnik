@@ -1,0 +1,108 @@
+<!-- <dx-data-grid
+  id="gridContainer"
+  [dataSource]="dataSource"
+  [showBorders]="true"
+  [width]="'100%'"
+>
+  <dxo-paging [pageSize]="10"></dxo-paging>
+  <dxo-pager
+    [showPageSizeSelector]="true"
+    [allowedPageSizes]="[10, 25, 50, 100]"
+  ></dxo-pager>
+  <dxo-header-filter [visible]="true"></dxo-header-filter>
+  <dxo-export [enabled]="true" [allowExportSelectedData]="true"></dxo-export>
+  <dxo-filter-row [visible]="true"></dxo-filter-row>
+  <dxo-search-panel
+    [visible]="true"
+    [highlightCaseSensitive]="true"
+  ></dxo-search-panel>
+
+  <dxo-grouping [autoExpandAll]="false"></dxo-grouping>
+  <dxo-scrolling mode="virtual"> </dxo-scrolling>
+  <dxi-column dataField="Product" [groupIndex]="0"></dxi-column>
+  <dxi-column
+    dataField="Amount"
+    caption="Sale Amount"
+    dataType="number"
+    format="currency"
+    alignment="right"
+  ></dxi-column>
+  <dxi-column
+    caption="Discount %"
+    dataField="Discount"
+    cellTemplate="discountCellTemplate"
+    dataType="number"
+    format="percent"
+    alignment="right"
+    [allowGrouping]="false"
+    cssClass="bullet"
+  ></dxi-column>
+  <dxi-column dataField="SaleDate" dataType="date"></dxi-column>
+  <dxi-column dataField="Region" dataType="string"></dxi-column>
+  <dxi-column dataField="Sector" dataType="string"></dxi-column>
+  <dxi-column dataField="Channel" dataType="string"></dxi-column>
+  <dxi-column dataField="Customer" dataType="string" [width]="150"></dxi-column>
+</dx-data-grid>
+
+<dx-load-panel
+  #loadPanel
+  shadingColor="rgba(0,0,0,0.4)"
+  [visible]="false"
+  [showIndicator]="true"
+  [showPane]="true"
+  [shading]="true"
+  [hideOnOutsideClick]="false"
+>
+</dx-load-panel> -->
+<div class="row g-0" style="height: 100vh">
+  <header class="layout-header">
+    <dx-toolbar class="header-toolbar">
+      <dxi-item
+        location="before"
+        widget="dxButton"
+        cssClass="menu-button"
+        [options]="{
+          icon: 'menu',
+          stylingMode: 'text',
+          onClick: toggleMenu
+        }"
+      >
+      </dxi-item>
+      <dxi-item
+        location="before"
+        cssClass="header-title2"
+        *ngIf="title"
+        [text]="title"
+      >
+      </dxi-item>
+
+     
+    </dx-toolbar>
+  </header>
+  <dx-drawer
+    class="layout-body"
+    position="before"
+    [closeOnOutsideClick]="shaderEnabled"
+    [openedStateMode]="menuMode"
+    [revealMode]="menuRevealMode"
+    [minSize]="minMenuSize"
+    [shading]="shaderEnabled"
+    [(opened)]="menuOpened"
+  >
+    <app-side-nav
+      [compactMode]="!menuOpened"
+      [selectedItem]="selectedRoute"
+      class="dx-swatch-additional"
+      *dxTemplate="let dataMenu of 'panel'"
+      (selectedItemChanged)="navigationChanged($event)"
+      (openMenu)="navigationClick()"
+    ></app-side-nav>
+
+    <dx-scroll-view class="with-footer">
+      <div class="content">
+        <ng-content></ng-content>
+      </div>
+    </dx-scroll-view>
+  </dx-drawer>
+</div>
+<ng-template #componentContainer></ng-template>

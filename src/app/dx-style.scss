@@ -1,0 +1,201 @@
+html,
+body {
+  margin: 0px;
+  min-height: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content-block {
+  margin-top: 15px;
+  .screen-x-small & {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.detail-responsive-paddings {
+  padding: 15px;
+  padding-bottom: 0;
+
+  .screen-large & {
+    padding: 15px;
+    padding-bottom: 0;
+  }
+}
+
+.responsive-paddings {
+  position: relative;
+  padding: 15px;
+  padding-bottom: 0;
+  .screen-large & {
+    padding: 15px;
+    padding-bottom: 0;
+    height: calc(100vh - 130px);
+  }
+  .screen-small & {
+    padding: 15px;
+    padding-bottom: 0;
+    height: calc(100vh - 500px);
+  }
+}
+
+.responsive-paddings-trowser {
+  height: calc(100vh - 150px);
+  .screen-large & {
+    padding: 15px;
+  }
+}
+
+.responsive-paddings-master {
+  padding: 15px;
+  height: calc(100vh - 275px);
+  .screen-large & {
+    padding: 25px;
+  }
+}
+
+.responsive-content-padding {
+  padding: 15px;
+  .screen-large & {
+    padding: 25px;
+    height: calc(100vh - 300px);
+  }
+}
+
+.d-con-grid-flex-row {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 160px);
+  .screen-x-small & {
+    height: calc(100vh - 160px);
+  }
+}
+
+.d-con-no-filter-grid-flex-row {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 150px);
+  .screen-x-small & {
+    height: calc(100vh - 160px);
+  }
+}
+
+.dx-card.wide-card {
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+.with-footer
+  > .dx-scrollable-wrapper
+  > .dx-scrollable-container
+  > .dx-scrollable-content {
+  height: 100%;
+
+  & > .dx-scrollview-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+}
+
+// .dx-swatch-additional,
+// .dx-theme-material-typography .dx-swatch-additional {
+//   background-color: #00405b !important;
+//   color: #fff !important;
+//   font-weight: 400 !important;
+//   font-size: 14px !important;
+//   font-family: "Graphik", sans-serif !important;
+//   line-height: 1.2857 !important;
+// }
+
+
+.dx-con-form {
+  padding: 25px;
+}
+.page-title {
+  margin: 0;
+}
+.pull-right {
+  float: left;
+}
+.page-info-title {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.dx-popup-wrapper > .dx-popup-fullscreen,
+.dx-popup-wrapper > .dx-state-focused.dx-popup-fullscreen {
+  border: none !important;
+}
+
+.d-con-page-tiles {
+  margin: 0;
+  padding-top: 15px;
+}
+
+.d-no-left-right-padding {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.d-con-page-tiles .d-no-left-right-padding {
+  flex-grow: 1;
+}
+
+.dx-show-clear-button .dx-icon-clear {
+  font-size: 14px !important;
+}
+
+.d-con-form {
+  padding: 15px 0 !important;
+}
+.mli-2 {
+  margin-left: 5px !important;
+}
+
+.d-doc-viewer {
+  width: 100%;
+}
+
+// for card background colors
+
+.bg-new {
+  background-color: #0a819c !important;
+}
+.bg-inprogress {
+  background-color: #5bc0de !important;
+}
+.bg-completed {
+  background-color: #5cb85c !important;
+}
+.bg-cancelled {
+  background-color: #d9534f !important;
+}
+.bg-review {
+  background-color: #f0ad4e !important;
+}
+.bg-sent {
+  background-color: #e9662c !important;
+}
+
+.text-card {
+  color: #fff !important;
+}
+
+.card-stats .card-body {
+  border-radius: 4px !important;
+}
+
+$side-panel-min-width: 70px;
+$side-panel-SubMenu-min-width: 30px;
+
+/* Importing Bootstrap SCSS file. */

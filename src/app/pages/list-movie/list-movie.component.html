@@ -1,0 +1,105 @@
+<div class="page-title">
+    <dx-form labelLocation="left" [showColonAfterLabel]="false" [colCount]="12">
+      <dxo-col-count-by-screen
+        [xs]="2"
+        [sm]="2"
+        [md]="2"
+        [lg]="2"
+      ></dxo-col-count-by-screen>
+      <dxi-item>
+        <div *dxTemplate>
+          <h2 class="page-info-title">Movies</h2>
+        </div>
+      </dxi-item>
+      <dxi-item>
+        <div class="pull-right">
+          <dx-button
+            text="Add Movies"
+            type="default"
+            (onClick)="onBtnAddMovieClicked()"
+            [elementAttr]="{ class: 'd-login-button mt-0 m-0' }"
+          >
+          </dx-button>
+        </div>
+      </dxi-item>
+    </dx-form>
+  </div>
+  
+  <div class="content-block pb-0 dx-card responsive-paddings">
+    <system-spinner [grdspin]="true"></system-spinner>
+  
+    <div class="d-con-grid-flex-row">
+      <dx-data-grid
+        #gridTeacher
+        class="d-grid-no-bacth-actions-filter"
+        [dataSource]="Movies"
+      >
+      <dxo-column-chooser [enabled]="false"></dxo-column-chooser>
+
+        <dxi-column
+          dataField="movie"
+          caption="Movie Name"
+          [allowHeaderFiltering]="false"
+          [allowFiltering]="true"
+        >
+        </dxi-column>
+        <dxi-column
+          dataField="category"
+          caption="Category"
+          [allowHeaderFiltering]="false"
+          [allowFiltering]="true"
+        >
+        </dxi-column>
+        <dxi-column
+          dataField="releaseyear"
+          caption="Release Year"
+          [allowHeaderFiltering]="false"
+          [allowFiltering]="true"
+        >
+        </dxi-column>
+        <dxi-column
+        dataField="id"
+        [width]="80"
+        alignment="center"
+        caption="Action"
+        [allowEditing]="false"
+        [fixed]="true"
+        fixedPosition="right"
+        [allowExporting]="false"
+        [allowFiltering]="false"
+        [allowFixing]="false"
+        [allowGrouping]="false"
+        [allowHeaderFiltering]="false"
+        [allowHiding]="false"
+        [allowReordering]="false"
+        [allowResizing]="false"
+        [allowSearch]="false"
+        [allowSorting]="false"
+        cellTemplate="buttonTemplate"
+      >
+      </dxi-column>
+        <div *dxTemplate="let buttonInfo of 'buttonTemplate'">
+            <div class="d-con-cell-action">
+              <dx-button
+                icon="edit"
+                type="success"
+                class="grd-btn"
+                id="btnMainAction-{{ buttonInfo.data.id }}"
+                (click)="onBtnEditClick(buttonInfo.data)"
+              >
+              </dx-button>
+              <dx-button
+                icon="trash"
+                type="danger"
+                class="grd-btn ms-2"
+                id="btnMoreActions-{{ buttonInfo.row.rowIndex }}"
+                (click)="onBtnDeleteClick(buttonInfo.data.id)"
+              >
+              </dx-button>
+            </div>
+          </div>
+      </dx-data-grid>
+    </div>
+  </div>
+  <ng-template #componentContainer></ng-template>
+  

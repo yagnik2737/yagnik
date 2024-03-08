@@ -1,0 +1,46 @@
+:host ::ng-deep {
+  :host-context(.dx-theme-generic) {
+    .dx-toolbar {
+      padding: 10px 6px;
+    }
+
+    .user-button > .dx-button-content {
+      padding: 3px;
+    }
+  }
+  .layout-header {
+    z-index: 1501;
+    height: 56px;
+  }
+
+  .layout-body {
+    flex: 1;
+    height: calc(100vh - 56px);
+  }
+
+  .content {
+    flex-grow: 1;
+    margin: 10px 15px 10px 15px;
+  }
+
+  .with-footer {
+    background-color: #f2f2f2;
+  }
+
+  .header-title2 .dx-item-content {
+    padding: 0;
+    font-weight: 700;
+    font-size: 23px;
+    color: #004766 !important;
+    font-family: Calibri;
+    margin: 0;
+  }
+
+  .dx-toolbar {
+    padding: 10px 5px;
+  }
+
+  // .user-button > .dx-button-content {
+  //   padding: 3px;
+  // }
+}

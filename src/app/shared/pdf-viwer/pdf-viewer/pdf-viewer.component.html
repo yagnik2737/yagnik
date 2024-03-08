@@ -1,0 +1,24 @@
+<dx-popup
+  class="d-con-popup"
+  [fullScreen]="true"
+  [title]="popupTitle"
+  [dragEnabled]="false"
+  [showCloseButton]="true"
+  [shading]="false"
+  [toolbarItems]="popupToolbarItems"
+  [(visible)]="popupVisible"
+  (onHidden)="onPopupHidden($event)"
+>
+<dxo-animation [hide]="hideAnimation" [show]="showAnimation"> </dxo-animation>
+  <div class="dx-pop-content">
+    <div class="dx-card responsive-paddings-trowser">
+      <div class="d-con-no-filter-grid-flex-row">
+        <div class="d-doc-viewer">
+          <ng2-pdfjs-viewer #pdfReportViewer></ng2-pdfjs-viewer>
+        </div>
+      </div>
+    </div>
+  </div>
+</dx-popup>
+
+<ng-template #componentDetailContainer></ng-template>

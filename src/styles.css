@@ -1,0 +1,70 @@
+.dx-popup-wrapper > .dx-state-focused.dx-popup-fullscreen,
+.dx-popup-wrapper > .dx-popup-fullscreen {
+  border: none;
+}
+
+.dx-formdialog .dx-popup-content {
+  padding: 20px;
+}
+
+
+
+.dx-popup-fullscreen .dx-popup-content {
+  background-color: #f4f5f8;
+}
+
+.dx-popup-fullscreen .dx-popup-bottom.dx-toolbar {
+  padding: 8px 15px;
+  background: #00354d !important;
+}
+
+.dx-datagrid-content .dx-datagrid-table .dx-row .dx-command-select {
+  width: 110px;
+  min-width: 110px;
+}
+
+.dx-datagrid-content .dx-datagrid-table .dx-row .dx-command-edit {
+  width: 100px;
+  min-width: 100px;
+}
+
+.dx-button {
+  font-weight: 600;
+}
+.dx-button-content .d-dropdown-arrow {
+  font-size: 18px;
+  padding-top: 3px;
+}
+
+.grd-img {
+  height: 40px;
+  width: 40px;
+}
+.grd-btn {
+  .dx-button-content {
+    padding: 6px !important;
+  }
+}
+
+.dx-datagrid .dx-header-filter:before {
+  content: "\f050";
+}
+
+/* half-popup btn */
+.dx-overlay-wrapper
+  .dx-overlay-content.dx-popup-flex-height
+  > .dx-popup-bottom {
+  .dx-button-mode-contained {
+    background-color: #337ab7 !important;
+    color: white;
+    font-weight: 400;
+  }
+
+  .dx-button-mode-contained.dx-state-hover {
+    background-color: #296293 !important;
+  }
+
+  .dx-button-mode-contained .dx-icon {
+    color: white;
+  }
+}

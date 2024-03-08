@@ -1,0 +1,30 @@
+<ng-container *ngIf="!grdspin">
+  <ngx-spinner
+    bdColor="rgba(245, 245, 245, 0.80)"
+    size="medium"
+    color="#fff"
+    type="square-jelly-box"
+    [fullScreen]="true"
+    template="<img height='140px' src='../assets/images/loader.gif'/>"
+    ><p
+      style="
+        color: rgb(40, 45, 190);
+        font-size: 20px;
+        font-weight: 400;
+        padding-top: 65px;
+      "
+    >
+      Loading ...
+    </p></ngx-spinner
+  >
+</ng-container>
+<ng-container *ngIf="grdspin">
+  <ngx-spinner
+    bdColor="rgba(0, 0, 0, 0.10)"
+    size="medium"
+    color="#fff"
+    [name]="'grdspinner'"
+    [fullScreen]="false"
+    template="<img height='120px' src='../assets/images/loader.gif'/>"
+  ></ngx-spinner>
+</ng-container>

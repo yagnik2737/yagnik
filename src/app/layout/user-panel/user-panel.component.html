@@ -1,0 +1,31 @@
+<div class="user-info">
+  <div class="image-container">
+    <div class="user-image">
+      <!-- <i class="dx-icon-user fs-2"></i> -->
+      <img src="../assets/user.png" alt="" />
+    </div>
+  </div>
+  <div>
+    <div>
+      <span class="user-name">{{ username }}</span>
+    </div>
+    <div>
+      <span class="role-name text-muted">({{ role }})</span>
+    </div>
+  </div>
+</div>
+<dx-context-menu
+  [position]="{ my: 'top', at: 'bottom' }"
+  [items]="menuItems"
+  target=".user-button"
+  showEvent="dxclick"
+  width="210px"
+  cssClass="user-menu"
+>
+</dx-context-menu>
+<dx-list
+  *ngIf="menuMode === 'list'"
+  class="dx-toolbar-menu-action"
+  [items]="menuItems"
+>
+</dx-list>
