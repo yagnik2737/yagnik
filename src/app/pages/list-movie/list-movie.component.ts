@@ -95,7 +95,8 @@ export class ListMovieComponent extends ListBase{
 
   onBtnDeleteClick(id){
     this.Service.deleteMovie(id).subscribe((res:any) => {
-      CustomDialogHelper.notifySuccessMsg(res.message);
+      CustomDialogHelper.notifySuccessMsg("Deleted SuccessFully!");
+      this.getAllMovies();
     })
   }
 }
